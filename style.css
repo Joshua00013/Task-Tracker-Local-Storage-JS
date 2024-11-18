@@ -1,0 +1,31 @@
+.disabled{
+    text-decoration: line-through;
+    color:gray
+}
+.taskitem{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+.deletebtn, .deletebtn img{
+    margin-left: auto;
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+
+}
+.deletebtn:hover{
+    cursor:pointer;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    width: 250px;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
