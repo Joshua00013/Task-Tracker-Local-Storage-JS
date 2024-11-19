@@ -1,12 +1,15 @@
 
 function submit(){
     const taskName = document.getElementById('taskInput_el').value;
-    const newTask = {
+    if(taskName !== ''){
+        const newTask = {
         task: taskName,
         completed: false
     }
     localStorage.setItem(newTask.task,newTask.completed);
     renderTasks();
+    }
+    
 }
 
 function renderTasks(){
@@ -14,6 +17,7 @@ function renderTasks(){
     tasklist.innerHTML = '';
 
     for (let i = 0; i < localStorage.length; i++){
+        const line = document.createElement("hr")
         const taskName = document.createElement("p");
         const taskItem = document.createElement("li");
         const checkbox = document.createElement("input");
@@ -24,6 +28,7 @@ function renderTasks(){
         deleteButton.className = "deletebtn";
         taskItem.className = "taskitem";
         checkbox.type = "checkbox";
+        checkbox.className = "taskcbox";
         
 
         const key = localStorage.key(i);
@@ -32,7 +37,7 @@ function renderTasks(){
         console.log(status);
         if(status !== false){
             checkbox.checked = true;
-            checkbox.className = "checked"
+            // checkbox.className = "checked"
             taskName.className = "disabled"
             console.log("DISABLED!")
         }
@@ -50,6 +55,7 @@ function renderTasks(){
         })
 
         deleteButton.addEventListener("click",()=>{
+            line.remove();
             taskItem.remove();
             localStorage.removeItem(key)
         })
@@ -59,7 +65,8 @@ function renderTasks(){
         taskItem.appendChild(checkbox);
         taskItem.appendChild(taskName);
         taskItem.appendChild(deleteButton);
-        tasklist.appendChild(taskItem)
+        tasklist.appendChild(taskItem);
+        tasklist.appendChild(line);
     }
 
 }

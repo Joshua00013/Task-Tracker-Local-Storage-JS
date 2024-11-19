@@ -7,25 +7,120 @@
     list-style-type: none;
     padding-left: 0;
 }
-.deletebtn, .deletebtn img{
+
+.deletebtn {
     margin-left: auto;
-    background-color: white;
+    background-color: transparent;
     border: none;
+}
+.deletebtn img{
     width: 30px;
     height: 30px;
-
 }
 .deletebtn:hover{
     cursor:pointer;
 }
 ul {
     padding: 0;
-    margin: 0;
+    margin-top: 7px;
 }
 li {
-    width: 250px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
     text-align: center;
     display: flex;
     padding: 0;
     margin: 0;
+}
+
+.heading{
+    font-family: sans-serif;
+}
+
+.input{
+    border:none;
+    height: 30px;
+    width: 350px;
+    margin:none;
+}
+.input:focus{
+    outline: none;
+}
+.submitBtn{
+    margin:0;
+    margin-bottom: 0px;
+    border-radius: 7px;
+    background-color: black;
+    border:none;
+    width: fit-content;
+    height: fit-content;
+    padding: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submitBtn:hover{
+    cursor: pointer;
+}
+.submitBtn:active{
+    background-color: grey;
+}
+.submitIcon{
+    padding: 3px;
+    color: white;
+    margin: 0;
+    height: 25px;
+    width: 25px;
+}
+.input_el{
+    display: flex;
+    border: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    width:fit-content;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top:2px;
+    padding-bottom: 2px;
+}
+.tracker{
+    width:fit-content;
+}
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.taskcbox{
+    appearance: none; /* Remove default checkbox styling */
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+.taskcbox:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+.taskcbox:checked::after {
+    content: '✔'; /* Unicode checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+hr{
+    padding: 0;
+    margin-top:0px;
+    margin-bottom: 5px;
 }

@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="taskInput_el">
-    <button onclick="submit()">Submit</button>
-    <ul id="taskList_el"></ul>
+    <h1 class="heading">Task Tracker</h1>
+    <div class="tracker">
+        <div class="input_el">
+        <input type="text" id="taskInput_el" class="input" placeholder="Enter your task here">
+        <button class ="submitBtn" onclick="submit()"><img class="submitIcon" src="check_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"></button>
+        </div>
+        <ul id="taskList_el"></ul>
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>
